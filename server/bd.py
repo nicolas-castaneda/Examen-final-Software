@@ -24,5 +24,5 @@ def buscar_nombre(numero):
 def agregar_transaccion(numero, operacion):
     for cuenta in BD:
         if cuenta.numero == numero:
-            cuenta.transaccion.append(operacion.to_dict())
+            cuenta.operaciones.append(operacion.to_dict())
             cuenta.saldo = cuenta.saldo + operacion.valor

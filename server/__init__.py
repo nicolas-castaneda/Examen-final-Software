@@ -58,14 +58,14 @@ def create_app(test_config=None):
         minumero = request.args.get('minumero')
         if minumero == None:
             return jsonify({'error': 'minumero no encontrado'}), 404
+        response = {}
+        response["nombre"] = buscar_nombre(minumero)
         minumero = buscar_usuario(minumero)
         if minumero:
-            response = {}
             historial = minumero.historial()
 
             saldo = historial["saldo"]
 
-            response["nombre"] = buscar_nombre(minumero)
             response["saldo"] = saldo
 
             transacciones = historial["operaciones"]
