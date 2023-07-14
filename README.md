@@ -14,20 +14,22 @@ Se crearía un test donde el valor a pagar sea mayor al permitido en ese dia. En
 
 Leve debido a que la implementación requerida no hace una modificación directa del código ni elimina lógica existente solo agrega nuevos condicionales y atributos al código.
 
+# Instalar dependencias
+
+```
+pip install -r requirements.txt
+```
+
 # Iniciar el server
 
 ```
-
 source venv/bin/activate
 bash run.bash
-
 ```
 
 # Test 
 
 ```
-
 source venv/bin/activate
 python3 -m unittest tests.py
-
 ```
