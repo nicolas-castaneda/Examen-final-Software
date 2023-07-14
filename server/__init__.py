@@ -71,8 +71,8 @@ def create_app(test_config=None):
             transacciones = historial["operaciones"]
             operaciones = []
             for transaccion in transacciones:
-                if transaccion["numero_emisor"] == minumero:
-                    operaciones.append(f"Pago realizado de {transaccion['valor']} a {buscar_nombre(transaccion['numero_destinatario'])}")
+                if transaccion["numero_emisor"] == minumero.numero:
+                    operaciones.append(f"Pago realizado de {transaccion['valor']} a {buscar_nombre(transaccion['numero_destino'])}")
                 else:
                     operaciones.append(f"Pago recibido de {transaccion['valor']} de {buscar_nombre(transaccion['numero_emisor'])}")
             
